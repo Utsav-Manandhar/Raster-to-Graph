@@ -35,7 +35,7 @@ class MyDataset(Dataset):
 
     def __getitem__(self, index):
         img_id = self.ids[index]
-        img_file_name = self.imgs[img_id]['file_name']
+        img_file_name = self.imgs[img_id]['filename']
         img = Image.open(os.path.join(self.img_path, img_file_name)).convert('RGB')
 
         if 1:
